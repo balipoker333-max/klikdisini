@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Balipoker333 - Situs Game Gacor Terbaik di Indonesia</title>
+
+    <!-- SEO META -->
+    <meta name="description" content="Balipoker333 adalah platform hiburan online terbaik dengan permainan lengkap, bonus besar, dan pengalaman bermain stabil di Indonesia.">
+    <meta name="keywords" content="balipoker333, slot online, poker, game online, situs gacor">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Balipoker333 - Situs Game Gacor Indonesia">
+    <meta property="og:description" content="Platform hiburan online terbaik dengan kemenangan melimpah.">
+    <meta property="og:image" content="https://i.imgur.com/51gFlgl.jpg">
+    <meta property="og:url" content="https://balip333men.store/">
+    <meta property="og:type" content="website">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://imgur.com/l2hyWzw.jpg">
+
     <style>
         /* ===== GLOBAL ===== */
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             background: radial-gradient(circle at center, #050505, #000018 60%, #000);
             font-family: Arial, sans-serif;
             color: #fff;
             text-align: center;
+            overflow-x: hidden;
         }
 
-        /* ===== PARTICLE BACKGROUND ===== */
+        /* PARTICLES */
         #particles {
             position: fixed;
             top: 0;
@@ -26,7 +43,7 @@
             z-index: -1;
         }
 
-        /* ===== CONTAINER ===== */
+        /* CONTAINER */
         .container {
             margin-top: 120px;
             padding: 20px;
@@ -45,7 +62,7 @@
             opacity: 0.85;
         }
 
-        /* ===== BANNER ===== */
+        /* BANNER */
         .banner {
             width: 90%;
             max-width: 850px;
@@ -60,7 +77,7 @@
             to   { box-shadow: 0 0 30px #ff1177; }
         }
 
-        /* ===== BUTTONS ===== */
+        /* BUTTONS */
         .button-group {
             display: flex;
             justify-content: center;
@@ -91,7 +108,7 @@
             box-shadow: 0 0 14px rgba(0,120,255,0.7);
         }
 
-        /* ===== MOBILE RESPONSIVE ===== */
+        /* MOBILE RESPONSIVE */
         @media (max-width: 600px) {
             h1 { font-size: 32px; }
             p { font-size: 17px; }
@@ -99,10 +116,11 @@
             .container { margin-top: 90px; }
         }
 
-        /* ===== ANIMATIONS ===== */
+        /* ANIMATIONS */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
+
 <body>
 
     <!-- PARTICLE CANVAS -->
@@ -112,8 +130,8 @@
         <h1>Selamat Datang di Balipoker333</h1>
         <p>Platform hiburan online terbaik dengan bonus serta kemenangan melimpah.</p>
 
-   <!-- Banner Poker -->
-<img src="https://i.imgur.com/51gFlgl.jpg" class="banner" alt="Slot online
+        <!-- Banner Poker (FIXED) -->
+        <img src="https://i.imgur.com/51gFlgl.jpg" class="banner" alt="Slot Online Balipoker333">
 
         <div class="button-group">
             <a href="https://balip333men.store/register" class="btn">Daftar Sekarang</a>
@@ -136,8 +154,8 @@
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 size: Math.random() * 3 + 1,
-                speedX: (Math.random() - 0.5) * 1,
-                speedY: (Math.random() - 0.5) * 1,
+                speedX: (Math.random() - 0.5),
+                speedY: (Math.random() - 0.5),
             });
         }
 
@@ -150,7 +168,13 @@
                 if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
 
-                ctx.fillStyle = ["rgba(0,120,255,0.8)","rgba(255,200,0,0.8)","rgba(150,0,255,0.8)"][Math.floor(Math.random()*3)];
+                const colors = [
+                    "rgba(0,120,255,0.8)",
+                    "rgba(255,200,0,0.8)",
+                    "rgba(150,0,255,0.8)"
+                ];
+
+                ctx.fillStyle = colors[Math.floor(Math.random()*colors.length)];
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fill();
